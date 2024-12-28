@@ -13,10 +13,21 @@ $(document).ready(function () {
         slidesPerView: "auto",
         spaceBetween: 16,
         loop: true,
-        speed: 1100,
+        speed: 3000,
         autoplay: {
-            delay: 1000
-          },
+            delay: 0,
+        },
       });
+
+    //   parallax ---- //
+
+    $(window).on("scroll", function () {
+        let scrollPos = $(window).scrollTop(); 
+        let scaleIndex = 1 + (scrollPos * 0.0005);
+        console.log(scaleIndex);
+
+        $(".bg-image img").css("transform", `scaleX(${scaleIndex})`);
+        $(".frame").css("transform", `translateY(-${scrollPos * 0.15}px)`);
+    });
 
 });

@@ -94,19 +94,22 @@
     margin-top: -3%;
     position: relative;
     z-index: -1;
-
-    .bg-image img{
+    overflow: hidden;
+    .bg-image img {
         width: 100%;
         background-size: cover;
     }
-
+    
     .frame {
         position: absolute;
+        transition: .1s linear;
         width: 75%;
         left: 5%;
-        top: 25%;
+        top: 35%;
+        transform: translateY(0px);
     }
 }
+.wave__rate,
 .wave__col{
     display: none;
 }
@@ -133,6 +136,9 @@
 .logotypes__carousel {
     .swiper-wrapper {
         align-items: center;
+    }
+    .swiper-wrapper {
+        transition-timing-function: linear;
     }
 
     img {
@@ -174,8 +180,32 @@
 
 
 @media (max-width:767px) {
+    .herosection {
+        padding-top: 30px;
+    }
     .wave__col{
+        margin-top: 32px;
         display: block;
+        text-align: center;
+        p{
+            font-size: 14px;
+            color: #000;
+            font-weight: 600;
+        }
+        img{
+            margin-bottom: 12px;
+        }
+    }
+    .wave__rate{
+        display: block;
+        margin: 32px auto 0;
+        width: 250px;
+    }
+    .wave{
+        padding-bottom: 56px;
+        .frame{
+            display: none;
+        }
     }
     .herosection__content {
         text-align: center;
@@ -229,12 +259,12 @@
     .herosection__content .herosection__btn {
         margin-bottom: 38px;
     }
+    .logotypes {
+        padding: 56px 0 40px;
+    }
 }
 
 @media (max-width:375px) {
-    .logotypes {
-        padding: 56px 0 50px;
-    }
 
     .logotypes__title {
         font-size: 20px;
