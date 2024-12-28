@@ -239,6 +239,9 @@
     .wave {
         margin-top: -10%;
     }
+    .bg-image img{
+        transform: none!important;
+    }
 }
 
 @media (max-width:576px) {
