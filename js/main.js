@@ -24,7 +24,6 @@ $(document).ready(function () {
     $(window).on("scroll", function () {
         let scrollPos = $(window).scrollTop(); 
         let scaleIndex = 1 + (scrollPos * 0.0005);
-        console.log(scaleIndex);
 
         $(".bg-image img").css("transform", `scaleX(${scaleIndex})`);
         $(".frame").css("transform", `translateY(-${scrollPos * 0.15}px)`);

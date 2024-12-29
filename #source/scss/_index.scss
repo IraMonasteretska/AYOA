@@ -95,11 +95,12 @@
     position: relative;
     z-index: -1;
     overflow: hidden;
+
     .bg-image img {
         width: 100%;
         background-size: cover;
     }
-    
+
     .frame {
         position: absolute;
         transition: .1s linear;
@@ -109,8 +110,9 @@
         transform: translateY(0px);
     }
 }
+
 .wave__rate,
-.wave__col{
+.wave__col {
     display: none;
 }
 
@@ -137,6 +139,7 @@
     .swiper-wrapper {
         align-items: center;
     }
+
     .swiper-wrapper {
         transition-timing-function: linear;
     }
@@ -154,11 +157,213 @@
 // *** --- *** //
 
 
+// --- advantages section --- //
+
+.advantages {
+    padding: 130px 0;
+}
+
+.advantages__title {
+    margin: 0 0 24px;
+    text-align: center;
+}
+
+.advantages__subtitle {
+    text-align: center;
+    margin: 0 0 77px;
+}
+
+.advantages__block {
+    margin-bottom: 80px;
+    border-radius: 40px;
+    padding: 97px 44px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.advantages__block {
+    display: flex;
+    align-items: center;
+
+    .mobile-btn {
+        display: none;
+    }
+}
+
+.advantages__image {
+    width: 46%;
+    margin-right: 82px;
+
+    img {
+        width: 100%;
+        background-size: cover;
+    }
+}
+
+.advantages__content {
+    width: 36%;
+
+    h3 {
+        margin: 0 0 24px;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 150%;
+    }
+
+    h4 {
+        font-size: 20px;
+        margin: 0 0 16px;
+        font-weight: 700;
+        line-height: 150%;
+    }
+
+    p {
+        margin: 0 0 28px;
+        font-size: 20px;
+        line-height: 150%;
+    }
+
+    ul,
+    ol {
+        margin: 0 0 24px;
+    }
+
+    li {
+        font-size: 20px;
+        line-height: 150%;
+    }
+}
+
+// *** --- *** //
+
+// --- testimonials section --- //
+
+.testimonials {
+    padding: 0 0 130px;
+}
+
+.testimonials__title {
+    text-align: center;
+    margin: 0 0 24px;
+}
+
+.testimonials__subtitle {
+    text-align: center;
+    margin: 0 0 54px;
+}
+
+.testimonials__row {
+    max-width: 1178px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto 57px;
+    border-radius: 200px;
+    background-color: #DFF5FE;
+    padding: 18px 118px 18px 18px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &:nth-child(even) {
+        flex-direction: row-reverse;
+        padding: 18px 18px 18px 118px;
+    }
+}
+
+.testimonials__image {
+    img {
+        display: block;
+        width: 180px;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+}
+
+.testimonials__content {
+    width: calc(100% - 250px);
+
+    p {
+        font-size: 20px;
+        line-height: 150%;
+        margin: 0 0 20px;
+    }
+    span{
+        font-size: 20px;
+        font-weight: 600;
+    }
+}
+
+// *** --- *** //
+
+
 
 //  ADAPTIVE //
 
 
+@media (max-width:1440px) {
+    .testimonials {
+        padding: 0 0 100px;
+    }
+    .advantages {
+        padding: 100px 0;
+    }
+
+    .advantages__subtitle {
+        margin: 0 0 60px;
+    }
+
+    .advantages__block {
+        margin-bottom: 60px;
+        padding: 85px 40px;
+    }
+
+    .advantages__image {
+        width: 50%;
+        margin-right: 5%;
+    }
+
+    .advantages__content {
+        width: 45%;
+    }
+}
+
 @media (max-width:1200px) {
+    .testimonials__row {
+        margin: 0 auto 40px;
+    }
+    .testimonials__subtitle {
+        margin: 0px 0 40px;
+    }
+    .testimonials__image img {
+        width: 160px;
+        height: 160px;
+    }
+    .testimonials__content {
+        width: calc(100% - 230px);
+    }
+    .testimonials__row {
+        padding: 18px 80px 18px 18px;
+        &:nth-child(even) {
+            padding: 18px 18px 18px 80px;
+        }
+    }
+    .testimonials__content p {
+        font-size: 18px;
+    }
+    .testimonials__content span {
+        font-size: 18px;
+    }
+    .advantages__block {
+        margin-bottom: 50px;
+        padding: 70px 35px;
+    }
+
     .herosection__content .title {
         font-size: 42px;
     }
@@ -169,6 +374,44 @@
 }
 
 @media (max-width:992px) {
+    .testimonials {
+        padding: 0 0 80px;
+    }
+    .testimonials__row {
+        padding: 18px 60px 18px 18px;
+        &:nth-child(even) {
+            padding: 18px 18px 18px 60px;
+        }
+    }
+    .testimonials__content {
+        width: calc(100% - 210px);
+    }
+    .advantages__block {
+        flex-wrap: wrap-reverse;
+
+        .desctope-btn {
+            display: none;
+        }
+
+        .mobile-btn {
+            margin: 32px 0 0;
+            display: inline-flex;
+        }
+    }
+
+    .advantages__image {
+        width: 100%;
+        margin: 0 auto;
+        max-width: 700px;
+        text-align: center;
+    }
+
+    .advantages__content {
+        max-width: 700px;
+        margin: 0 auto 12px;
+        width: 100%;
+    }
+
     .herosection__content .title {
         font-size: 36px;
     }
@@ -180,33 +423,91 @@
 
 
 @media (max-width:767px) {
+    .testimonials__row {
+        padding: 0px 18px 18px 18px;
+        flex-direction: column;
+        border-radius: 20px;
+        margin-top: 90px;
+        &:nth-child(even) {
+            padding: 0px 18px 18px 18px;
+            flex-direction: column;
+        }
+    }
+    .testimonials__image{
+        margin-top: -50px;
+        margin-bottom: 20px;
+        img{
+            width: 100px;
+            height: 100px;
+        }
+    }
+    .testimonials__content{
+        width: 100%;
+        text-align: center;
+        p{
+            font-size: 14px;
+        }
+        span{
+            font-size: 16px;
+        }
+    }
+    .advantages__block {
+        padding: 56px 35px;
+    }
+
+    .advantages__content h3 {
+        margin: 0px 0 24px;
+        font-size: 26px;
+    }
+
+    .advantages__content p {
+        margin: 0 0 20px;
+        font-size: 18px;
+    }
+
+    .advantages__content li {
+        font-size: 18px;
+    }
+
+    .advantages__content ol,
+    .advantages__content ul {
+        margin: 0 0 15px;
+    }
+
     .herosection {
         padding-top: 30px;
     }
-    .wave__col{
+
+    .wave__col {
         margin-top: 32px;
         display: block;
         text-align: center;
-        p{
+
+        p {
             font-size: 14px;
             color: #000;
             font-weight: 600;
         }
-        img{
+
+        img {
             margin-bottom: 12px;
         }
     }
-    .wave__rate{
+
+    .wave__rate {
         display: block;
         margin: 32px auto 0;
         width: 250px;
     }
-    .wave{
+
+    .wave {
         padding-bottom: 56px;
-        .frame{
+
+        .frame {
             display: none;
         }
     }
+
     .herosection__content {
         text-align: center;
     }
@@ -236,32 +537,76 @@
             max-width: 220px;
         }
     }
+
     .wave {
         margin-top: -10%;
     }
-    .bg-image img{
-        transform: none!important;
+
+    .bg-image img {
+        transform: none !important;
     }
 }
 
 @media (max-width:576px) {
+    .advantages {
+        padding: 56px 0;
+    }
+    .testimonials {
+        padding: 0 0 56px;
+    }
+    .testimonials__row {
+        margin-top: 80px;
+    }
+    .advantages__block .mobile-btn {
+        height: 48px;
+        padding: 5px 30px;
+    }
+
+    .advantages__content {
+        p {
+            font-size: 16px;
+            text-align: center;
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        h4 {
+            text-align: center;
+        }
+
+        li {
+            font-size: 16px;
+        }
+    }
+
+    .advantages__block {
+        padding: 56px 24px;
+    }
+
     .herosection__image img {
         width: 100%;
     }
+
     .herosection__content .title {
         font-size: 32px;
         margin: 0 0 24px;
     }
+
     .herosection__content .subtitle {
         font-size: 16px;
     }
+
     .herosection__content .descr {
         font-size: 16px;
         margin: 0 0 36px;
     }
+
     .herosection__content .herosection__btn {
         margin-bottom: 38px;
     }
+
     .logotypes {
         padding: 56px 0 40px;
     }
@@ -277,6 +622,7 @@
     .logotypes__carousel {
         img {
             max-width: 170px;
+            max-height: 60px;
         }
     }
 }
