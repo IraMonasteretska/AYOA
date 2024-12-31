@@ -19,6 +19,30 @@ $(document).ready(function () {
         },
     });
 
+    // clients carousel --------------------- //
+    var swiper = new Swiper(".clients__carousel", {
+        slidesPerView: 4,
+        loop: true,
+        speed: 1500,
+        autoplay: {
+            delay: 800,
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+            },
+            576: {
+                slidesPerView: 2,
+            },
+            992: {
+                slidesPerView: 3,
+            },
+            1200: {
+                slidesPerView: 4,
+            },
+        },
+    });
+
     //   parallax ---- //
     $(window).on("scroll", function () {
         let scrollPos = $(window).scrollTop();
@@ -29,49 +53,42 @@ $(document).ready(function () {
     });
 
 
-
+    //  advantages layout animation
     if ($(".advantages").length) {
-
 
         var cards = gsap.utils.toArray(".advantages__block");
 
-        // Створення ScrollTrigger для першої картки
         ScrollTrigger.create({
             trigger: cards[0],
             start: "center center"
         });
 
-        // Створення ScrollTrigger для останньої картки
         var lastCardTrigger = ScrollTrigger.create({
             trigger: cards[cards.length - 1],
             start: "center center"
         });
 
-        // Перебір усіх карток для створення анімації
         cards.forEach(function (card, index) {
-            // Обчислення масштабу залежно від індексу картки
             var scaleValue = 1 - 0.02 * (cards.length - index);
 
-            // Створення анімації масштабування
             var animation = gsap.to(card, {
                 scale: scaleValue,
                 "transform-origin": '50% ' + (- lastCardTrigger.start * 0.15)
-                });
+            });
 
-        // Створення ScrollTrigger для кожної картки
-        ScrollTrigger.create({
-            trigger: card,
-            start: "center center",
-            end: function () {
-                return lastCardTrigger.start + 0;
-            },
-            pin: true,
-            pinSpacing: false,
-            // ease: "none",
-            animation: animation,
-            toggleActions: "restart none none reverse"
+            ScrollTrigger.create({
+                trigger: card,
+                start: "center center",
+                end: function () {
+                    return lastCardTrigger.start + 0;
+                },
+                pin: true,
+                pinSpacing: false,
+                ease: "none",
+                animation: animation,
+                toggleActions: "restart none none reverse"
+            });
         });
-    });
-        }
+    }
 
 });
