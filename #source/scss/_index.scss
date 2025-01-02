@@ -37,7 +37,9 @@
     }
 
     .herosection__btn {
-        margin-bottom: 24px;
+        margin: 0 85px 0 0;
+        height: 60px;
+        font-size: 20px;
     }
 }
 
@@ -64,16 +66,13 @@
 
 .herosection__col {
 
-    img {
-        margin-bottom: 12px;
-    }
 
     p {
         color: #000;
         font-size: 14px;
         line-height: 24px;
         font-weight: 600;
-        margin: 0;
+        margin: 12px 0 0;
     }
 }
 
@@ -161,7 +160,7 @@
 // --- advantages section --- //
 
 .advantages {
-    padding: 130px 0 100px;
+    padding: 130px 0 70px;
     overflow: hidden;
 }
 
@@ -619,27 +618,97 @@
 // *** --- *** //
 
 
+// --- cta section --- //
+
+.cta {
+    position: relative;
+}
+
+.cta__left-frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20%;
+    background-size: cover;
+}
+
+.cta__right-frame {
+    position: absolute;
+    top: -30px;
+    right: 0;
+    width: 18%;
+    background-size: cover;
+}
+
+.cta__wrapper {
+    background-color: #DFF5FE;
+    border-radius: 40px;
+    text-align: center;
+    padding: 54px 0 66px;
+}
+
+.cta__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 54px;
+    font-weight: 600;
+    margin: 0 0 40px;
+
+    img {
+        width: 196px;
+        margin: 0 29px;
+        background-size: cover;
+    }
+}
+
+.cta__button {
+    margin-bottom: 40px;
+    padding: 18px 36px;
+    height: 60px;
+    font-size: 20px;
+}
+
+.cta__rating img {
+    width: 486px;
+    background-size: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+// *** --- *** //
+
+
 
 //  ADAPTIVE //
 
 
 @media (max-width:1440px) {
-    .about{
+    .cta__left-frame {
+        top: 15%;
+    }
+
+    .about {
         padding: 100px 0;
     }
-    .about__content{
+
+    .about__content {
         width: 55%;
         padding-right: 50px;
-        p{
+
+        p {
             font-size: 20px;
         }
     }
+
     .about__image {
         width: 45%;
     }
+
     .clients__wrapper {
         padding: 60px 20px;
     }
+
     .clients__item {
         img {
             max-height: 40px;
@@ -704,13 +773,32 @@
 }
 
 @media (max-width:1200px) {
-    .about__logos{
+    .cta__left-frame {
+        top: 30%;
+    }
+
+    .cta__title {
+        font-size: 46px;
+    }
+
+    .cta__title img {
+        margin: 0px 20px;
+        width: 170px;
+    }
+
+    .cta__rating img {
+        width: 430px;
+    }
+
+    .about__logos {
         justify-content: center;
     }
-    .about__content{
+
+    .about__content {
         padding-right: 20px;
         text-align: center;
     }
+
     .ways__title {
         margin: 0 0 60px;
     }
@@ -763,21 +851,29 @@
 }
 
 @media (max-width:992px) {
-    .about{
+    .cta__left-frame {
+        top: initial;
+        bottom: -5%;
+    }
+
+    .about {
         padding: 80px 0;
     }
-    .about__wrapper{
+
+    .about__wrapper {
         flex-wrap: wrap;
     }
-    .about__content{
+
+    .about__content {
         padding-right: 0;
         width: 100%;
         margin-bottom: 40px;
     }
-    .about__image{
+
+    .about__image {
         width: 100%;
     }
-    
+
     .ways {
         padding: 40px 0 80px;
     }
@@ -911,28 +1007,41 @@
 
 
 @media (max-width:768px) {
+    .cta__rating img {
+        width: 350px;
+    }
+
+    .cta__wrapper {
+        padding: 56px 0 56px;
+    }
+
     .about__content p {
         font-size: 16px;
     }
-    
+
     .about__logos-item {
         width: 145px;
     }
+
     .about__logos-item+.about__logos-item {
         margin-left: 60px;
     }
+
     .about__logos-item+.about__logos-item:before {
         left: -30px;
         height: 60px;
     }
+
     .clients__title {
         font-size: 26px;
         margin: 0 0 34px;
     }
+
     .clients__item {
         p {
             font-size: 16px;
-            br{
+
+            br {
                 display: none;
             }
         }
@@ -1070,8 +1179,18 @@
     }
 
     .herosection__rate,
-    .herosection__row {
+    .herosection__col {
         display: none;
+    }
+
+    .herosection__row {
+        justify-content: center;
+    }
+
+    .herosection__content .herosection__btn {
+        margin: 0;
+        height: 48px;
+        font-size: 16px;
     }
 
     .herosection__image img {
@@ -1105,16 +1224,45 @@
 }
 
 @media (max-width:576px) {
-    .about{
+
+    .cta__right-frame {
+        width: 120px;
+        top: -35%;
+    }
+
+    .cta__left-frame {
+        width: 120px;
+        bottom: -30px;
+    }
+
+    .cta__rating img {
+        width: auto;
+    }
+
+    .cta__button {
+        padding: 12px 36px;
+        height: 48px;
+    }
+
+    .cta__title {
+        font-size: 28px;
+    }
+
+    .cta__title img {
+        margin: 0px 12px;
+        width: 128px;
+    }
+
+    .about {
         padding: 56px 0;
     }
 
-    .clients__wrapper{
+    .clients__wrapper {
         padding: 56px 15px;
     }
 
     .advantages {
-        padding: 56px 0;
+        padding: 56px 0 0;
     }
 
     .testimonials {
