@@ -77,7 +77,7 @@
 }
 
 .herosection__rate img {
-    width: 249px;
+    width: 231px;
     background-size: cover;
 }
 
@@ -582,27 +582,17 @@
 }
 
 .about__logos-item {
-    width: 150px;
+    max-width: 150px;
 
     img {
-        width: 100%;
+        max-width: 100%;
+        max-height: 83px;
         background-size: cover;
     }
 
     &+.about__logos-item {
-        margin-left: 88px;
+        margin-left: 44px;
         position: relative;
-
-        &:before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: -44px;
-            transform: translateY(-50%);
-            width: 1px;
-            height: 80px;
-            background-color: #CBD4D5;
-        }
     }
 }
 
@@ -1019,14 +1009,12 @@
         font-size: 16px;
     }
 
-    .about__logos-item {
-        width: 145px;
-    }
-
     .about__logos-item+.about__logos-item {
-        margin-left: 60px;
+        margin-left: 20px;
     }
-
+    .about__logos-item img {
+        max-height: 55px;
+    }
     .about__logos-item+.about__logos-item:before {
         left: -30px;
         height: 60px;
@@ -1145,7 +1133,7 @@
     }
 
     .wave__col {
-        margin-top: 32px;
+        margin-top: 30px;
         display: block;
         text-align: center;
 
@@ -1236,7 +1224,7 @@
     }
 
     .cta__rating img {
-        width: auto;
+        width: 172px;
     }
 
     .cta__button {
