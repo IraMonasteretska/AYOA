@@ -89,16 +89,15 @@
 .footer__socials {
     display: flex;
     align-items: center;
-    margin: 0 0 7px;
 
-    &:last-child {
-        margin: 0;
-    }
 
     a {
         transition: .3s ease;
         width: 48px;
         height: 48px;
+        &+a{
+            margin-left: 7px;
+        }
 
         &:hover {
             opacity: 0.7;
@@ -226,6 +225,9 @@
 }
 
 @media (max-width:576px) {
+    .footer__sertificate img {
+        max-height: 95px;
+    }
     .footer-nav {
         padding: 60px 0 10px;
     }
