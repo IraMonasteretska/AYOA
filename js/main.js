@@ -1,14 +1,14 @@
 
 $(document).ready(function () {
 
-    // burger-menu --------------------- //
+    // burger-menu 
     $('.burger-btn').on('click', function () {
         $(this).toggleClass('active');
         $('.mobile-menu').toggleClass('active');
     });
 
 
-    // logotypes carousel --------------------- //
+    // logotypes carousel 
     var swiper = new Swiper(".logotypes__carousel", {
         slidesPerView: "auto",
         spaceBetween: 16,
@@ -19,7 +19,7 @@ $(document).ready(function () {
         },
     });
 
-    // clients carousel --------------------- //
+    // clients carousel
     var swiper = new Swiper(".clients__carousel", {
         slidesPerView: 4,
         loop: true,
@@ -43,13 +43,13 @@ $(document).ready(function () {
         },
     });
 
-    //   parallax ---- //
+    //   parallax 
     $(window).on("scroll", function () {
         let scrollPos = $(window).scrollTop();
-        let scaleIndex = 1 + (scrollPos * 0.0005);
+        let scaleIndex = 1 + (scrollPos * 0.0001);
 
         $(".bg-image img").css("transform", `scaleX(${scaleIndex})`);
-        $(".frame").css("transform", `translateY(-${scrollPos * 0.15}px)`);
+        $(".frame").css("transform", `translateY(-${scrollPos * 0.25}px)`);
     });
 
 
