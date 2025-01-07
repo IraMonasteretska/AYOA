@@ -4,14 +4,12 @@
 .herosection {
     position: relative;
     padding-top: 40px;
-    padding-bottom: 130px;
 }
 
 .herosection__image img {
     display: block;
     position: absolute;
-    max-width: 950px;
-    max-height: 900px;
+    width: 920px;
     // width: 50%;
     background-size: cover;
     right: 0;
@@ -94,6 +92,7 @@
 
 .wave {
     width: 100%;
+    margin-top: -3%;
     position: relative;
     z-index: -1;
     overflow: hidden;
@@ -109,7 +108,7 @@
         transition: .1s linear;
         width: 75%;
         left: 5%;
-        top: 65%;
+        top: 55%;
         transform: translateY(0px);
     }
 }
@@ -330,7 +329,7 @@
 
     .ways__content {
         h3 {
-            font-weight: 700 !important;
+            font-weight: 700!important;
             font-size: 32px;
             margin: 0 0 24px;
             text-align: center;
@@ -675,17 +674,13 @@
 
 
 @media (max-width:1600px) {
-    .herosection {
-        padding-bottom: 0;
-    }
-
     .herosection__image img {
         width: 50%;
+        top: initial;
+        bottom: 0;
     }
 }
-
 @media (max-width:1440px) {
-
     .cta__left-frame {
         top: 15%;
     }
@@ -1005,6 +1000,10 @@
     .herosection__content .herosection__subtitle {
         font-size: 22px;
     }
+    .herosection__image img {
+        bottom: initial;
+        top: 0;
+    }
 }
 
 
@@ -1024,11 +1023,9 @@
     .about__logos-item+.about__logos-item {
         margin-left: 20px;
     }
-
     .about__logos-item img {
         max-height: 55px;
     }
-
     .about__logos-item+.about__logos-item:before {
         left: -30px;
         height: 60px;
