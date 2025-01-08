@@ -5,6 +5,12 @@ $(document).ready(function () {
     $('.burger-btn').on('click', function () {
         $(this).toggleClass('active');
         $('.mobile-menu').toggleClass('active');
+        $('body').toggleClass('hidden');
+    });
+
+    // mobile language 
+    $('.mobile__lang').on('click', function () {
+        $('.mobile__lang ul').slideToggle();
     });
 
 
@@ -46,7 +52,7 @@ $(document).ready(function () {
     //   parallax 
     $(window).on("scroll", function () {
         let scrollPos = $(window).scrollTop();
-        let scaleIndex = 1 + (scrollPos * 0.0001);
+        let scaleIndex = 1 + (scrollPos * 0.0002);
 
         $(".bg-image img").css("transform", `scaleX(${scaleIndex})`);
         $(".frame").css("transform", `translateY(-${scrollPos * 0.25}px)`);

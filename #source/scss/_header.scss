@@ -34,6 +34,14 @@
     }
 }
 
+.header__button {
+    width: 153px;
+}
+.header__top-buttons{
+    width: 153px;
+    text-align: center;
+}
+
 .header__wrapper {
     display: flex;
     align-items: center;
@@ -101,6 +109,71 @@
     span {
         font-size: 20px;
         font-weight: 500;
+    }
+}
+
+.header__lang {
+    >ul {
+        position: absolute;
+        left: -25%;
+        background-color: #fff;
+        box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+        transition: .4s ease-in-out 0s;
+        padding: 2px 15px 10px;
+        visibility: hidden;
+        opacity: 0;
+        z-index: -1;
+        transform: translateY(10px);
+        list-style: none;
+    }
+
+    &:hover {
+        >ul {
+            visibility: visible;
+            opacity: 1;
+            z-index: 99;
+            transform: translateY(0px);
+        }
+    }
+
+    li {
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 10px;
+    }
+    a{
+        transition: .3s ease;
+        &:hover{
+            color: #00C1FF;
+        }
+    }
+}
+
+.mobile__lang{
+    padding: 0;
+    >ul{
+        display: none;
+        li {
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+    }
+    &:after {
+        display: none;
+    }
+    >span{
+        position: relative;
+        display: block;
+        &:after {
+            content: '';
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            top: calc(50% - 11px);
+            right: -20px;
+            background-image: url(../img/arrow.svg);
+        }
     }
 }
 
@@ -203,9 +276,11 @@
         height: 100%;
         background: #fff;
         z-index: 9;
-        padding-top: 130px;
+        padding: 130px 0 30px;
         text-align: center;
-        &.active{
+        overflow: auto;
+
+        &.active {
             transform: translateX(0%);
         }
 
@@ -222,7 +297,8 @@
                 margin-bottom: 0;
             }
         }
-        a{
+
+        a {
             font-size: 18px;
             font-weight: 600;
         }
@@ -235,6 +311,9 @@
     .mobile__lang {
         width: 50px;
         margin: 0 auto 62px;
+        ul{
+            padding-top: 10px;
+        }
     }
 
     .mobile__login {
