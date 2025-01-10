@@ -97,6 +97,45 @@ $(document).ready(function () {
         });
     }
 
+
+    //  ways layout animation
+    if ($(".ways").length) {
+
+        var blocks = gsap.utils.toArray(".ways__block");
+
+        ScrollTrigger.create({
+            trigger: blocks[0],
+            start: "center center"
+        });
+
+        var lastBlockTrigger = ScrollTrigger.create({
+            trigger: blocks[blocks.length - 1],
+            start: "center center"
+        });
+
+        blocks.forEach(function (block, index) {
+            var scaleValue = 1 - 0.002 * (blocks.length - index);
+
+            var animation = gsap.to(block, {
+                scale: scaleValue,
+                "transform-origin": '50% ' + (- lastBlockTrigger.start * 0.5)
+            });
+
+            ScrollTrigger.create({
+                trigger: block,
+                start: "center center",
+                end: function () {
+                    return lastBlockTrigger.start + 0;
+                },
+                pin: true,
+                pinSpacing: false,
+                ease: "none",
+                animation: animation,
+                toggleActions: "restart none none reverse"
+            });
+        });
+    }
+
     // AOS 
     AOS.init({
         duration: 1000,
