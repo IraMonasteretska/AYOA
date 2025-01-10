@@ -344,6 +344,7 @@
 
     .ways__content {
         margin: 0 0 auto;
+
         h3 {
             font-weight: 700 !important;
             font-size: 32px;
@@ -683,10 +684,15 @@
     margin: 0 auto 24px;
 }
 
-.cta__g2{
+.cta__g2 {
+    display: inline-block;
     width: 191px;
-    background-size: cover;
     margin: 0 auto;
+
+    img {
+        width: 100%;
+        background-size: cover;
+    }
 }
 
 // *** --- *** //
@@ -975,6 +981,7 @@
     .ways__block.halfwidth {
         width: 100%;
     }
+
     .ways__block .ways__content {
         max-width: 500px;
         margin: 0 auto auto;
@@ -1268,7 +1275,7 @@
 }
 
 @media (max-width:576px) {
-    
+
     .wave {
         padding-bottom: 40px;
     }
@@ -1377,7 +1384,8 @@
     .herosection__content .title {
         font-size: 32px;
         margin: 0 0 24px;
-        br{
+
+        br {
             display: none;
         }
     }
