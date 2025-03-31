@@ -931,6 +931,9 @@
 }
 
 @media (max-width:1200px) {
+    .herosection__content {
+        max-width: 520px;
+    }
     .info__wrapper {
         padding: 50px 50px;
     }
@@ -1031,6 +1034,9 @@
 }
 
 @media (max-width:992px) {
+    .herosection__content {
+        max-width: 450px;
+    }
     .info__row {
         display: block;
     }
